@@ -11,6 +11,7 @@ library(jsonlite)
 #' \item path: complete path
 #' \item response
 #' }
+#' @export
 #'
 igdb_request <- function(endpoint, parameters = "", key = "") {
   completePath <- paste(endpoint, parameters, sep = "")
@@ -28,6 +29,7 @@ igdb_request <- function(endpoint, parameters = "", key = "") {
 #' \item path: complete path
 #' \item response
 #' }
+#' @export
 igdb_complete_request <- function(completePath = "", key = "") {
 
   if(key == "") {

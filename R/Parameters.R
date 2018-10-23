@@ -7,6 +7,7 @@
 #' @param result    igdb_parameters result variable
 #' @param paramName param variable name
 #' @return refactored parameter text
+#' @export
 resultQuery <- function(param = "", result = "", paramName = "") {
   if(result == "") {
     paramName <- paste("?", paramName, "=", param, sep = "")
@@ -29,6 +30,7 @@ resultQuery <- function(param = "", result = "", paramName = "") {
 #' @param filter  filter sets the specific filters to your response ex: list("[genre][eq]=33"). adding multiple filters will AND then in the response
 #' @param query   query replaces ALL other params and is intended for raw queryparams
 #' @return a complete and valid queryParameter for use with your request.
+#' @export
 #' @examples
 #' igdb_parameters(fields = "id,name,genres.name", order = "name:desc", expand = "genres")
 #' igdb_parameters(search = "Zelda", fields = "id,name,genres.name", order = "name:desc", expand = "genres")
