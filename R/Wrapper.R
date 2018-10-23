@@ -1,6 +1,5 @@
 library(httr)
 library(jsonlite)
-library(roxygen2)
 
 #' igdb_request requests the IGDB API for information
 #'
