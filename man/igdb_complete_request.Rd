@@ -5,10 +5,12 @@
 \title{igdb_complete_request function creates a new GET request to the IGDB API
 This function is used by igdb_request() which creates the complete path for you.}
 \usage{
-igdb_complete_request(completePath = "")
+igdb_complete_request(completePath = "", key = "")
 }
 \arguments{
 \item{completePath}{the complete pathcosists of the endpoint path and the query parameters}
+
+\item{key}{IGDB API key}
 }
 \value{
 a structure containing: \itemize{

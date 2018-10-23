@@ -4,12 +4,14 @@
 \alias{igdb_request}
 \title{igdb_request requests the IGDB API for information}
 \usage{
-igdb_request(endpoint, parameters = "")
+igdb_request(endpoint, parameters = "", key = "")
 }
 \arguments{
 \item{endpoint}{The endpoint you wish to request, use the pre-made endpoint varaiables}
 
 \item{parameters}{the completed query parameters from igdb_parameters}
+
+\item{key}{IGDB API key}
 }
 \value{
 a structure containing: \itemize{
