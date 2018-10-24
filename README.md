@@ -166,4 +166,12 @@ json_resp <- igdb_request(COMPANIES, params, igdb_key)
 # The sent request will look like this:
 # https://api-endpoint.igdb.com/companies/?search=rockstar&fields=name,logo&filter[name][in]=rockstar&limit=5&offset=0&order=name:desc
 
+# Search for two specific games by their IDs
+params <- igdb_parameters(ids = "18472,18228", 
+                         fields = "name,cover")
+json_resp <- igdb_request(GAMES, params, igdb_key)
+
+# The sent request will look like this:
+# https://api-2445582011268.apicast.io/games/18472,18228?fields=name,cover 
+
 ```
