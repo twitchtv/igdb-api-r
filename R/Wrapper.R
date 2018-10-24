@@ -16,7 +16,7 @@ library(jsonlite)
 #' igdb_request(GAMES, igdb_parameters(fields = "id,name"), key = "YOUR_KEY")
 igdb_request <- function(endpoint, parameters = "", key = "") {
   completePath <- paste(endpoint, parameters, sep = "")
-  igdb_complete_request(completePath)
+  igdb_complete_request(completePath, key)
 }
 
 
