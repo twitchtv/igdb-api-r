@@ -80,6 +80,7 @@ igdb_parameters <- function(
 ){}
 ```
 query is for advanced usage which overrides the logic of the function. It is basically a return(query)
+
 IMPORTANT
 Note that the filter param is a list() of "strings"
 Note that you cannot use both search and ids, this will trow an exception
