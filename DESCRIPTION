@@ -1,7 +1,7 @@
 Package: igdb
 Type: Package
 Title: IGDB API Wrapper
-Version: 0.1.1
+Version: 0.1.2
 Author: Filip
 Maintainer: The package maintainer <filip@igdb.com>
 Description: This package needs a valid IGDB API key to work.

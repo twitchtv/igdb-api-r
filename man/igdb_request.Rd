@@ -23,3 +23,6 @@ a structure containing: \itemize{
 \description{
 igdb_request requests the IGDB API for information
 }
+\examples{
+igdb_request(GAMES, igdb_parameters(fields = "id,name"), key = "YOUR_KEY")
+}
