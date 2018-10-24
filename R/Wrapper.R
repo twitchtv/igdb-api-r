@@ -31,6 +31,8 @@ igdb_request <- function(endpoint, parameters = "", key = "") {
 #' \item response
 #' }
 #' @export
+#' @import jsonlite
+#' @import httr
 igdb_complete_request <- function(completePath = "", key = "") {
 
   if(key == "") {
