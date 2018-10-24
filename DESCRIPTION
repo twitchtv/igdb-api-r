@@ -15,4 +15,5 @@ RoxygenNote: 6.1.0
 Imports:
     httr,
     jsonlite
-  
+Suggests: 
+    testthat
