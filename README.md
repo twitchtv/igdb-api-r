@@ -131,18 +131,16 @@ json_resp <- igdb_request(GAMES, params, igdb_key)
 ```
 
 ## More examples
+Search for up to two Atari platforms and return their names
 ```R
-igdb_key <- "YOUR KEY"
-
-# Search for up to two Atari platforms and return their names
 params <- igdb_parameters(search = "Atari", fields = "name", limit = 2))
 json_resp <- igdb_request(PLATFORMS, params, igdb_key)
 
 # The sent request will look like this:
 # https://api-endpoint.igdb.com/platforms/?search=Atari&fields=name&limit=2 
-
-# Search for up to five Zelda games with release dates between 1 Jan and
-# 31 Dec 2011, sorted by release date in descending order.
+```
+Search for up to five Zelda games with release dates between 1 Jan and 31 Dec 2011, sorted by release date in descending order.
+``` R
 params <- igdb_parameters(search = "Zelda", 
                          fields = "name,release_dates.date,rating,hypes,cover", 
                          filter = list("[release_dates.date][gt]=2010-12-31", 
@@ -153,9 +151,9 @@ json_resp <- igdb_request(GAMES, params, igdb_key)
 
 # The sent request will look like this:
 # https://api-endpoint.igdb.com/games/?search=Zelda&fields=name,release_dates.date,rating,hypes,cover&filter[release_dates.date][gt]=2010-12-31&filter[release_dates.date][lt]=2012-01-01&limit=5&order=release_dates.date:desc 
-
-# Search for companies with 'rockstar' in their name. Return up to five
-# results sorted by name in descending order
+```
+Search for companies with 'rockstar' in their name. Return up to five results sorted by name in descending order
+``` R
 params <- igdb_parameters(search = "rockstar", 
                          fields = "name,logo", 
                          filter = list("[name][in]=rockstar"),
@@ -165,8 +163,9 @@ json_resp <- igdb_request(COMPANIES, params, igdb_key)
 
 # The sent request will look like this:
 # https://api-endpoint.igdb.com/companies/?search=rockstar&fields=name,logo&filter[name][in]=rockstar&limit=5&offset=0&order=name:desc
-
-# Search for two specific games by their IDs
+```
+Search for two specific games by their IDs
+``` R
 params <- igdb_parameters(ids = "18472,18228", 
                          fields = "name,cover")
 json_resp <- igdb_request(GAMES, params, igdb_key)
