@@ -31,7 +31,8 @@ igdb_request(GAMES, params, igdb_key) || igdb_request(GAMES, params, Sys.getenv(
 ```
 
 ## Usage
-All API endpoints are available as variables in the wrapper. 
+All API endpoints are available as variables in the wrapper.
+
 Example: you want to request the games endpoint then you use the variable 'GAMES'
 ### All endpoints (variables)
 * CHARACTERS
@@ -78,8 +79,10 @@ igdb_parameters <- function(
   query = ""
 ){}
 ```
-Important to note here is that filter is a list() of "strings"
 query is for advanced usage which overrides the logic of the function. It is basically a return(query)
+IMPORTANT
+Note that the filter param is a list() of "strings"
+Note that you cannot use both search and ids, this will trow an exception
 
 ### The response structure
 The response is returnes as a structure which looks like this: 
@@ -118,7 +121,9 @@ Using filter
 
 ``` R
 igdb_key <- "YOUR KEY"
-params <- igdb_parameters(fields = "*", order = "published_at:desc", filter = list("[themes][not_in]=42"))
+params <- igdb_parameters(fields = "*", 
+                         order = "published_at:desc", 
+                         filter = list("[themes][not_in]=42"))
 json_resp <- igdb_request(GAMES, params, igdb_key)
 # The sent request will look like this:
 # https://api-endpoint.igdb.com/games/?fields=*&filter[themes][not_in]=42&order=published_at:desc 
@@ -139,7 +144,8 @@ json_resp <- igdb_request(PLATFORMS, params, igdb_key)
 # 31 Dec 2011, sorted by release date in descending order.
 params <- igdb_parameters(search = "Zelda", 
                          fields = "name,release_dates.date,rating,hypes,cover", 
-                         filter = list("[release_dates.date][gt]=2010-12-31", "[release_dates.date][lt]=2012-01-01"),
+                         filter = list("[release_dates.date][gt]=2010-12-31", 
+                                      "[release_dates.date][lt]=2012-01-01"),
                          limit = 2),
                          order = "release_dates.date:desc")
 json_resp <- igdb_request(GAMES, params, igdb_key)
