@@ -39,7 +39,7 @@ igdb_complete_request <- function(completePath = "", key = "") {
     stop("Empty API key, please set the parameter 'key' with your API key.")
   }
 
-  url <- modify_url("https://api-endpoint.igdb.com", path = completePath)
+  url <- modify_url("https://api-v3.igdb.com", path = completePath)
 
     resp <- GET(url, add_headers(`user-key` = key), encode = "json")
 
