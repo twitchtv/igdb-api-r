@@ -133,7 +133,7 @@ json_resp <- igdb_request(GAMES, params, igdb_key)
 ## More examples
 Search for up to two Atari platforms and return their names
 ```R
-params <- igdb_parameters(search = "Atari", fields = "name", limit = 2))
+params <- igdb_parameters(search = "Atari", fields = "name", limit = 2)
 json_resp <- igdb_request(PLATFORMS, params, igdb_key)
 
 # The sent request will look like this:
