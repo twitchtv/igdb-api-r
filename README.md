@@ -1,3 +1,15 @@
+# NOTICE
+This repository is for the v3 version of the API and no longer supported. 
+
+A member of the community has created this for V4: https://github.com/praster1/igdbV4 
+
+
+
+
+
+
+
+
 # igdb-api-r
 An R wrapper for the IGDB.com Free Video Game Database API.
 
